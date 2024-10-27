@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Compra</title>
+    <link rel="stylesheet" href="stylepagar.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Contacto</h2>
+            <a href="#" class="login-link">Iniciar Sesión</a>
+            <input type="email" placeholder="Correo">
+            
+            <h2>Entrega</h2>
+            <input type="text" placeholder="País/Región">
+            <div class="name-fields">
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Apellido">
+            </div>
+            <input type="text" placeholder="Comuna">
+            <input type="text" placeholder="Calle">
+            <input type="text" placeholder="N° de casa/dpto">
+            <textarea placeholder="Instrucciones adicionales"></textarea>
+            <button class="add-address-button">Añadir Dirección</button>
+        </section>
+        
+        <section class="order-summary">
+            <div class="product-info">
+                <div class="product-image">
+                    <img src="stock/product-placeholder1.png" alt="Producto">
+                </div>
+                <div class="product-details">
+                    <h3>[Nombre Producto]</h3>
+                    <p>[Precio]</p>
+                    <p class="description">[Descripción]</p>
+                </div>
+            </div>
+            <div class="price-details">
+                <p>Producto <span>[Precio]</span></p>
+                <p>Envío <span>$XXXX</span></p>
+                <p>Total <span>[Total]</span></p>
+            </div>
+            <button class="pay-button">Pagar</button>
+        </section>
+    </main>
+</body>
+</html>
