@@ -3,19 +3,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura */
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('stock/imagenes/background.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda el área del body */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 220    , 0.8); /* Color de superposición con opacidad */
+    z-index: -1; /* Coloca la capa detrás del contenido del body */
 }
 
 header {
     width: 100%;
     padding: 10px 20px;
     border-bottom: 1px solid #ccc;
+    background-color: #fff3dc;
 }
 
 .header-content {
@@ -43,9 +66,11 @@ header {
 
 .search-bar input {
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #ccc;
+    border-radius: 7px;
     width: 200px; /* Ancho fijo para la barra de búsqueda */
+    background-color: #f5f5dc;
+    border-color: #d2b48c;
 }
 
 main {
@@ -61,13 +86,19 @@ main {
 .sidebar {
     width: 20%;
     padding: 20px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #6b4226;
+    border-left: 1px solid #6b4226;
+    border-top: 1px solid #6b4226;
+    border-bottom: 1px solid #6b4226;
+    backdrop-filter: blur(2px); /* Efecto de desenfoque */
+    background-color: rgba(255, 243, 220, 0.2)  ; /* Fondo semitransparente */
 }
 
 .sidebar h2 {
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: bold;
+    
 }
 
 .sidebar h3 {
@@ -85,6 +116,25 @@ main {
     margin-bottom: 10px;
 }
 
+.sidebar ul li a {
+    color: #333; /* Color de texto normal */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 16px;
+}
+
+.sidebar ul li a:visited {
+    color: #333; /* Evita que el color cambie al hacer clic */
+}
+
+.sidebar ul li a:hover {
+    color: #6b4226; /* Color estático en hover */
+}
+
+.sidebar ul li a:active {
+    color: #333; /* Color estático en active */
+}
+
+
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -97,8 +147,9 @@ main {
     border: 1px solid #ccc;
     text-align: center;
     padding: 10px;
-    background-color: #f9f9f9; /* Fondo claro para destacar cada tarjeta */
     transition: transform 0.2s; /* Efecto de hover */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque */
+    background-color: rgba(255, 255, 255, 0.3)  ; /* Fondo semitransparente */
 }
 
 .product-card:hover {
@@ -147,4 +198,4 @@ main {
 
 .buy-button:hover {
     background-color: #8b5a2b; 
-}
+} 
